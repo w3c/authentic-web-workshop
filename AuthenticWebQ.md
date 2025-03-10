@@ -9,17 +9,17 @@ Answer these questions using your familiarity with __<a href="https://www.w3.org
 3. Explain the chain of events that help assess credibility in your tool. What architectural choices have you made that enable this?
 
 4. Which role(s) does your tool fill in the ecosystem (noting that some tools fill multiple roles):
-* Content Consumer - Person receiving the information (audience, reader)
-* Content Provider/Source - Person(s) or organizations delivering content 
-* Content Promoter - Person(s) or organization that amplify the spread of information
-* Credibility Facilitator - Person(s) or organization who is helping the consumer decide what to trust.
-* Platform - Technological system, and by extension the person or organization who maintains and controls it. 
+** Content Consumer - Person receiving the information (audience, reader)
+** Content Provider/Source - Person(s) or organizations delivering content 
+** Content Promoter - Person(s) or organization that amplify the spread of information
+** Credibility Facilitator - Person(s) or organization who is helping the consumer decide what to trust.
+** Platform - Technological system, and by extension the person or organization who maintains and controls it. 
 
 5. Which <a href="https://www.w3.org/2018/10/credibility-tech/#h.32pkwj5grlt3">technical approaches</a> do you enable? Are there other ecosystem players that enable these technical approaches with which you will interoperate. Please elaborate
-* Inspection
-* Corroboration
-* Reputation
-* Transparency
+** Inspection
+** Corroboration
+** Reputation
+** Transparency
 
 6. Describe how your tool works technically.
 
