@@ -31,6 +31,6 @@ Answer these questions using your familiarity with __<a href="https://www.w3.org
  
 10. Outline the risks of using this tooling. Are there potential unintended consequences, such as enabling censorship or increasing bias? What can be done to mitigate these risks?
 
-11. What do you hope for from this W3C in this effort?
+11. What do you hope for from W3C in this effort?
 
 
