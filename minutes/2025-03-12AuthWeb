@@ -1,0 +1,666 @@
+# Authentic Web mini-workshop series: Meeting 1 2025-03-12
+
+
+[March 12, 2025](https://www.w3.org/events/meetings/ca79dd08-3124-438a-9f02-e426074b0923/)
+
+Chair: Dominique Hazael-Massieux (W3C)
+
+Scribe: Coralie Mercier (W3C)
+
+Present:
+
+1. Tzviya Siegman (W3C),
+
+2. [Dominique Hazael-Massieux](mailto:dom@w3.org), W3C
+
+3. Coralie Mercier, W3C
+
+4. Tantek Çelik (Mozilla, Credweb CG)
+
+5. [Scott Yates](mailto:scott@journallist.net)(trust.txt),
+
+6. Martin Thomson (Mozilla),
+
+7. Leonard Rosenthol (Adobe & C2PA),
+
+8. Anssi Kostiainen (Intel, W3C Web Machine Learning WG Chair)
+
+9. David Karger (MIT)
+
+10. Barrett Golding (Iffy.news)
+
+11. Steve Cole (MAG)
+
+12. Chris Needham (BBC, Workshop Programme Committee)
+
+13. Vagner Diniz (NIC.br)
+
+14. Jeffrey Yasskin (Google Chrome & TAG)
+
+15. Phill Jones (MoreBrains.coop)
+
+16. Connie Moon Sehat (Discourse Labs)
+
+17. Rick Byers (Google Chrome)
+
+18. Emily Stark (Google Chrome)
+
+19. Reto Gmür (FactsMission)
+
+20. Shigeya Suzuki (Keio University, Originator Profile CIP)
+
+21. Michiko Kuriyama (Originator Profile CIP)
+
+22. Wei Ding (Huawei Corp.)
+
+23. Shane Greenup (rbutr)
+
+24. Nick Doty (CDT)
+
+25. Virginia Balseiro ([dokieli](https://dokie.li/))
+
+26. Josh Russell (Forward Democracy)
+
+27. Rose Newell (Independent / associated with Forward Democracy)
+
+28. Filippo Menczer (Indiana University)
+
+29. James Gallagher (Independent)
+
+30. Benjamin Young (Digital Bazaar, Inc.)
+
+31. Bumblefudge (Protocol Labs/Independent)
+
+32. Georg Rehm, German Research Center for Artificial Intelligence (DFKI)
+
+33. Sebastian Posth ([Liccium.com](https://liccium.com))
+
+34. Carmen Canas (Bocoup)
+
+35. Julie Vaccalluzzo (Capgemini)
+
+36. Michael Golebiewski (Microsoft)
+
+37. Chris Rusnak (Veri.FYI)
+
+38. Annette Greiner (NERSC, Lawrence Berkeley National Lab)
+
+39. Joe Andrieu (Legendary Requirements)
+
+40. David Chadwick (Truetrust Ltd)
+
+41. Naomi Yoshizawa (W3C)
+
+42. Wendy Reid (Rakuten)
+
+43. Sérgio Nunes (INESC TEC and University of Porto, Portugal)
+
+44. Mike Pennisi (Bocoup)
+
+45. Symeon Papadopoulos (CERTH)
+
+46. Owen Ambur  [AboutThem.info](http://aboutthem.info), [StratML.us](http://stratml.us) & [ConnectedCommunity.net](http://connectedcommunity.net)
+
+47. Tatsuya Igarashi (Sony)
+
+48. Yasushi Minoya (Sony)
+
+49. Piotr Zaborowski (OGC)
+
+50. Philip Long (RHz Consulting/T3-US Chamber of Commerce Fdn/Georgetown/ASU)
+
+51. Jennie Meier (Digital Contract Design)
+
+52. Andrew Kaizer
+
+53. Jan Drewniak (Wikimedia foundation)
+
+54. Jeremy Uzan
+
+55. Sandro Hawke
+
+56. [François Daoust](mailto:fd@w3.org), W3C
+
+57. Will Abramson
+
+58. Harry
+
+59. Fil Menczer
+
+60. Link Meng
+
+Slideset: [Authentic Web mini-workshop: #1](https://docs.google.com/presentation/d/1GHnFDmS5TPrOnMINuLO-JaxWQJ9NAJzRjOB7ZV22mjY/edit)
+
+Video record: <https://customer-0kix77mxh2zzzae0.cloudflarestream.com/bf0e0abbb9c746bc336c73932b554335/watch>
+
+
+# Mini-workshop introduction
+
+# Review framework
+
+<https://github.com/w3c/authentic-web-workshop/blob/main/AuthenticWebQ.md>
+
+
+# Discussion
+
+\[Dom introduces the session and logistics]
+
+Dom: this series of meetings, organized by Tzviya and myself, hosted by the credible web CG, chaired by Scott and Sandro
+
+… with lots of support from Chris Needham
+
+… first meeting in a series
+
+Dom: why are we here?
+
+… mis-information and dis-information have reached a level on the web where they create a systemic risk
+
+… if you can’t trust the web, people will stop publishing and getting content on the web
+
+… one way I like to think about this is to refer to “dark web” for sites of not reputable content
+
+… if the web as a whole goes there it’s not a productive evolution of the web
+
+… with that motivation, the question gets: what can we do to reduce the risk to the platform?
+
+… lots of us as lots of ideas
+
+… at different layers
+
+… regulatory, economic
+
+… changes to specific websites or platforms
+
+… at W3C we focus on understanding what part of this ecosystem can be usefully and meaningfully address by interoperable tech
+
+… that is, specific to relevant platform
+
+… to that end, we offer to take a very structured approach to existing and emerging technologies in the space of provenance
+
+… to understand what they change
+
+… one specific angle we’ll be looking at is whether browsers can play a role
+
+… ultimately what we want to achieve is understand what standards W3C can help with
+
+… either directly or by liaising
+
+… what we’ll want to do is build that map
+
+… we’re proposing a series of meetings
+
+… traditional way for W3C is to organize 2 or 3-day meetings
+
+… before we get there, we want to get a shared understanding of what’s on the table, what are the right questions to ask
+
+… we haven’t quite yet reached the level where we understand enough to have a productive f2f meeting
+
+… we have only scheduled this meeting so far
+
+… second will be later in April
+
+… you may subscribe to notifications on the announcements on the GH repo
+
+- Subscribe to [GitHub notifications of Announcements for future meetings](https://github.com/w3c/authentic-web-workshop/discussions/1)
+
+… cadence may change based on feedback; thus open-ended approach we’re taking.
+
+Dom: what kind of tech we expect to be looking at?
+
+… a few resources were Identified in [preparatory discussions](https://github.com/w3c/strategy/issues/483):
+
+- [C2PA](https://c2pa.org/) et al
+
+- [Originator Profile](https://originator-profile.org/)
+
+- [trust.txt](https://journallist.net/reference-document-for-trust-txt-specifications)
+
+- [Chromium Reputation Provider Framework](https://docs.google.com/document/d/1wTFafdHa-o3OYCKmYzEJGROrpSoxXN6DNXPltzdiUzg/edit?tab=t.0#heading=h.40o7mijeapa7)
+
+Dom: you may raise issues on the repo
+
+… we’ll be asking proposals
+
+… to build shared understanding
+
+… so we expect some work from proposers
+
+… but we may not be able to review all proposals
+
+… feel free to get in touch with Tzviya or myself
+
+\[Dom asks participants to write in the Zoom chat their name, affiliation, and a one-liner descriptions of why they’re here]
+
+Dom: we’ll be publishing minutes in the GH repo.
+
+Dom: today we won’t review proposals in that space, but present options and get feedback
+
+… including different approaches we might want to take
+
+… we’ll do this based on the work on the credible web CG
+
+… which published a CG report in 2018
+
+… fairly thorough review of aspects and constraints
+
+… we’ve distilled a series of questions from the report
+
+… the GH repo is a good place as well to provide input
+
+\====
+
+Tzviya: we’re open to feedback
+
+… when you speak please introduce yourself
+
+… we’ll be asking you what problem you’re trying to solve
+
+… there are many problems, we understand
+
+… we’re trying to narrow-down
+
+… how can we approach multiple problems, detect chain of events
+
+… please explain problems, use-cases, actors.
+
+Tzviya: architecture
+
+… we’ll need to hear what problems relate to architecture
+
+… we’ll ask you to let us know about tools or software APIs
+
+… and their roles
+
+… and those may be multiple
+
+… maybe you’re the content provider, or delivering it, or promoter
+
+… maybe you’re the platform but not the source of the information
+
+… and then there’s the platform
+
+… which conveys the information
+
+… we’d like to see some nuances
+
+… please discern the roles you’re trying to deliver
+
+Tzviya: then we’ll look at the technical approaches
+
+… Inspection
+
+… corroboration looks for signal interpretation
+
+… reputation might reveal identity and provenance whether certificates are available or not
+
+… transparency about what’s available under the hood
+
+Tzviya: again, technical details
+
+… may overlap with tech approach
+
+Tzviya: UX is also important
+
+… the user research that went into the choices is critical and we need to understand
+
+Tzviya: Effectiveness
+
+… what have you done? Testing etc. to make this effective
+
+Tzviya: Since you’re bringing this to W3C, what aspects would benefit from standardization
+
+… we need to understand your goals
+
+Tzviya: we should all be looking at threat modelling
+
+… the risks, unintended consequences, increasing bias, censorship?
+
+… and what can be done to mitigate those risks
+
+Tzviya: what do you hope for W3C to achieve?
+
+\[recording stops]
+
+Dom: Thanks Tzviya for the presentation
+
+… Please raise your hand
+
+… (in Zoom)
+
+… we can also look at the framework
+
+… we can take your questions
+
+… we can take a different approach
+
+… I do not suggest we dive into proposals as it’s for another meeting
+
+Tzviya: I’ve received some proposals already
+
+\====
+
+Jeffrey Yasskin: I think we’re missing aspects about how systems will be attacked
+
+… possible actors should be included in the framework
+
+Dom: expected from threat modelling
+
+Jeffrey Yasskin: it’s not listed specifically
+
+Tantek Çelik: this group in particular needs to address more severely that others the credibility of our work itself
+
+… I provided a couple examples of flaws, the Politician’s Syllogism and Solutions Looking For Problems (“Interested in” or “How we leverage” technology X for to solve problem Y)
+
+… we need to be extra critical of the work and statements made
+
+… from an attacker’s perspective, what can be leveraged?
+
+… I already witnessed that several of the introductions listed are solutions looking for problems
+
+… as we look for threats, they don’t have to be malevolent
+
+… ways of critiquing our dialogue is one of them
+
+Dom: yes, very little progress made in that space
+
+… as you put in the chat, tech solutions are a priority
+
+Shane Greenup: The comment I want to make
+
+… there’s different value
+
+… to make a big impact
+
+… one of the things that stand out is ways to identify truth when we know for a fact that there is research showing how little people care about authenticity when they share information
+
+… if credibility meant anything, climate change would have been tackled decades ago
+
+… I think we need to rethink that
+
+… one of the ways to approach credibility is through browsers @@
+
+… essentially, how I see bringing credibility to the web
+
+… is to connect claims
+
+… and rely on dialectic component of the web
+
+Dom: quick reaction
+
+… one topic that appears
+
+… we need to look at it again and again
+
+… I don’t want to assume
+
+… how much of the needle can we move?
+
+… if the answer is none, at least it will be a useful outcome to the discussion
+
+Leonard Rosenthol: to Shane’s point
+
+… some people equate credibility with truth
+
+… but we don’t associate those
+
+… truth is a human determination
+
+… authenticity: provide people with information they determine is credible in their venue
+
+… you show people the same thing
+
+… 50% will trust it but it doesn’t change its authenticity
+
+… define credibility in the work we’re doing in this group
+
+Virginia Balseiro: I think it’s a very interesting point of view
+
+… lots of problems we’re trying to solve aren’t purely technical
+
+… someone made the point that people don’t care about credibility
+
+… I think it’s partly true and partly what’s credible is now harder to determine
+
+… but it’s important to look at these things
+
+… how the concept differ
+
+… I work on Dokieli
+
+… an editor and annotation tool, we are working on a set of features as part of a browser extension
+
+… something to evaluate if something is credible or not
+
+… we can offer people solutions to make the determination
+
+… we want to learn how do people engage already with online content, how they already assess
+
+… these are questions that we start from
+
+… and how we can help develop some muscles
+
+… so that people know what to pay attention to
+
+… digital literacy
+
+… and educational as well
+
+… It’s very hard to conclude which credibility signals
+
+… can for sure determine truth
+
+… truth is a complicated term
+
+… let’s say credible or not
+
+… we can for sure improve the tech we have to help individuals make those assessments themselves
+
+… user-friendly way, more accessible
+
+Tzviya: I’d like to take us back a few steps
+
+… W3C works on tech solution
+
+… we have implications on social change
+
+… everyone here probably agrees that tech is political
+
+… technical change is the only way we can have an effect
+
+… I completely agree with the points Virginia made
+
+… are we equipped to assess tooling?
+
+… I’m trying to move the conversation beyond what is truth.
+
+James Gallagher: what can we learn from flaws built in technology?
+
+… what is a tool my sister in high school could use?
+
+… as a separate point, I’ve observed the absence of provenance is not necessarily a bad signal
+
+… but discouraging @@
+
+Connie Moon Sehat: I’d like to suggest a change to the framework
+
+… around problem we’re solving
+
+… as a proxy we can use the definition developed
+
+… or ask specifically to define how credibility works
+
+… it could be that tools proposed are solutions
+
+… so if problem is better articulated, maybe in tandem that can help us understand if the solution actually works
+
+Dom: thanks for feedback on the framework
+
+… this is the kind of improvements we are looking for
+
+Rick Byers: figuring out what the problems we need to agree on and which to compete
+
+… I’m interested in creating the situation where users have choices
+
+… and we create the solutions
+
+… I didn’t see that in the framework
+
+… which compares one against another
+
+… we need to enable different ideas so that they’re competition
+
+Dom: we meant that by “interoperability” but we need to make it more explicit
+
+Nick Doty: I’m also concerned about the interoperability of tooling that could be effective here
+
+… I think there are categorizations of tooling which can be missing from the report
+
+… other than provenance
+
+… a separate piece is about evaluating including reputation
+
+… it will be useful to make sure these categories are in the framework
+
+… and added to assessment
+
+Dom: 5th question attempted to address this
+
+… so useful to clarify
+
+Phill Jones: I’m one of the founders of MoreBrains Cooperative
+
+… working with STM publishers
+
+… validating a research image
+
+… so that its integrity can be assessed
+
+… it’s a big emerging problem
+
+… looking at the framework
+
+… how could tech support mechanisms in place to assert trust
+
+… for example peer review
+
+… is being swamped by false information and data coming in the system
+
+… how to improve the trust mechanisms that are under pressure?
+
+Dom: good input
+
+Wendy Reid: amazing start
+
+… I’m excited about this framework
+
+… +1 things said earlier re: not trying to define truth
+
+… what we can focus on
+
+… there is a lot of domain specific challenges
+
+… in trade publishing, there are problems in verification
+
+… people want to buy the right book
+
+… the real book, not a fake one, and publishers want to keep their sales, and platforms want to sell the right content to buyers
+
+… I’d call that out
+
+… the tech solution may not entirely change but may be influenced by nuances between industries, use cases, and stakeholders in the supply chain
+
+Anssi Kostiainen: I’m the web machine learning WG chair
+
+… how much the framework is concerned with AI generated content?
+
+… enough of the web is already AI-generated, including malicious AI-generated content
+
+… Rick, thanks for sharing your use-case with us
+
+… there’s an ecosystem of ad-blockers to enhance the user experience on the web, drawing parallels, e.g. detecting deepfakes with web extensions running in browsers is already possible
+
+Dom: Thanks
+
+… re: AI
+
+… what is reasonably clear is that AI is likely multiplying the challenges we’re facing in that space
+
+… because credible content multiplied compared to before
+
+… I don’t have preset answers, we need research
+
+Jeffrey Yasskin: looking again at the framework questions
+
+… I think we’re missing questions around the social impact of the tools
+
+… it’s broader than a single user
+
+… it's worth describing the plan even before research is available
+
+Dom: good point
+
+… congruent with point made earlier
+
+… makes sense
+
+Shane Greenup: someone chatted about browser extensions
+
+… the one we developed had a great ecosystem but consisted of people who are already skeptics
+
+… to combat propaganda and misinformation there has to be a way to reach wider audiences
+
+… i don’t care about a particular approach
+
+… but there needs to be an independent solution that is plugged into the platforms
+
+… has to be presented in a way that is not declarative
+
+… so as to not ostracize people
+
+… so, has to be native to the web
+
+Dom: to rephrase, I think you’re raising the scale question to have impact
+
+… I think we need that in the framework
+
+… also, how to help users who are misled and want to be helped
+
+… I think we should ask project submitters to clarify
+
+Shane Greenup: there’s value in applying to to journalism and academia
+
+… the Internet has changed the landscape of information
+
+… and the ecosystem
+
+… bias is reinforced by internet
+
+… tech of the web has changed exposure to ideas
+
+… there needs to be a way to counter that, pushback on those flaws
+
+… I look at it as a population thing
+
+Scott Yates: we’re at time
+
+… Thank you
+
+… once we dive into the proposal, everything will come out much stronger
+
+… thanks for your participation today
+
+Dom: go to the GH repo to raise proposals
+
+… get in touch if you want to discuss anything in depth
+
+\
+
+
+Scott Yates: We invited people from IEEE over the years
+
+… as well as the people from the “fake news” group
+
+Tzviya: next meeting will be late April, stay tuned.
+
+\[adjourned]
+
