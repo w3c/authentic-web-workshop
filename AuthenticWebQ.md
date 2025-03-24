@@ -15,7 +15,7 @@ Answer these questions using your familiarity with __<a href="https://www.w3.org
 * Credibility Facilitator - Person(s) or organization who is helping the consumer decide what to trust.
 * Platform - Technological system, and by extension the person or organization who maintains and controls it. 
 
-5. Which <a href="https://www.w3.org/2018/10/credibility-tech/#h.32pkwj5grlt3">technical approaches</a> do you enable? Are there other ecosystem players that enable these technical approaches with which you will interoperate? Please elaborate
+5. Which <a href="https://www.w3.org/2018/10/credibility-tech/#h.32pkwj5grlt3">technical approaches</a> do you enable? Are there other ecosystem players that enable the technical approaches with which you will interoperate? Please elaborate
 * Inspection
 * Corroboration
 * Reputation
@@ -29,7 +29,7 @@ Answer these questions using your familiarity with __<a href="https://www.w3.org
 
 9. What aspects of your proposal would benefit from being standardized? With which systems does it need to interoperate? How will this fit into existing technical and social systems (e.g. browser extension, peer review)?
  
-10. Outline the risks of using this tooling. Are there potential unintended consequences, such as enabling censorship or increasing bias? What can be done to mitigate these risks?
+10. Create a threat model for your proposal. Are there potential unintended consequences, such as enabling censorship or increasing bias? What are potential attack vectors? What can be done to mitigate these risks?
 
 11. What do you hope for from W3C in this effort?
 
