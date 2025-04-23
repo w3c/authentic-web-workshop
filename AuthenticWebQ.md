@@ -16,10 +16,10 @@ Answer these questions using your familiarity with __<a href="https://www.w3.org
 * Platform - Technological system, and by extension the person or organization who maintains and controls it. 
 
 5. Which <a href="https://www.w3.org/2018/10/credibility-tech/#h.32pkwj5grlt3">technical approaches</a> do you enable? Are there other ecosystem players that enable the technical approaches with which you will interoperate? Please elaborate
-* Inspection
-* Corroboration
-* Reputation
-* Transparency
+* Inspection of credibility signals
+* Corroboration of facts, signals
+* Reputation. This can include provenance of the chain of providers, verified trust seals.
+* Transparency requires the information provider to disclose information about themselves and their content.
 
 6. Describe how your technology, tool, or proposal works from a technical perspective.
 
