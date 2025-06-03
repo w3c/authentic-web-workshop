@@ -121,7 +121,7 @@ domains where they don’t want the extension to run, via an Options page.
 
 We developed the approach based on our research on:
 
-1. Need- finding studies to investigate what signals should be provided to users to support them in
+1. Need-finding studies to investigate what signals should be provided to users to support them in
    content credibility seeking and providing practices that they are already engaging in, but
    without structured support, and often despite the current structures undermining their efforts.
    We observed that users need a channel for assessing content accuracy for the benefit of their
@@ -141,11 +141,16 @@ We developed the approach based on our research on:
    of sharing misinformation: [Exploring Lightweight Interventions at Posting Time to Reduce the
    Sharing of Misinformation on Social Media](https://dl.acm.org/doi/pdf/10.1145/3449092)
 5. Development of the Reheadline browser extension that enables users to modify problematic content
-   for the better. This extension focuses on news headlines and allows users to suggest alternative
+   for the better and its longitudinal evaluation. This extension focuses on news headlines and allows users to suggest alternative
    headlines for news articles. This is a user-centered approach intended to involve users in
    combating misleading headlines or clickbaits. Other users who follow the headline suggester will
    see the suggested alternative headline next to the original wherever on the web that the
-   alternative headline appears.
+   original headline appears.
+6. Development of a personalized AI system to address the scale limitations of user-driven assessments by predicting 
+   how a user would assess unseen content based on their prior judgments, and a user study exploring its use and
+   unintended consequences. This approach enables users' assessments on one instance of a claim to generalize
+   across similar posts published by different sources: [Exploring the Use of Personalized AI for Identifying 
+   Misinformation on Social Media](https://dl.acm.org/doi/pdf/10.1145/3544548.3581219) 
 
 ## 8. Provide any research or evidence supporting the effectiveness of your tool.
 
