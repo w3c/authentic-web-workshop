@@ -12,22 +12,29 @@ and then tells them which websites and articles their network thinks are credibl
 
 We are in US East, Central, and West time zones.
 
-Emails: karger@mit.edu
+Emails: karger@mit.edu, jyasskin@google.com
 
 ### Please link to Github repos, proposals, explainers, or drafts that you’ve written.
 
 Trustnet is currently developed in 4 Github repositories:
 
-* https://github.com/farnazj/Trustnet-Backend server hosting trust information and credibility assessments
-* https://github.com/farnazj/Trustnet-Client prototype social application that leverages trusted credibility assessments to filter content in the user's news feed.
-* https://github.com/farnazj/Trustnet-Extension browser extension that leverages trust to inform people about content in place wherever they encounter it as they browse the web
-* https://github.com/farnazj/Reheadline-Extension browser extension that lets users change article headlines in place for people who trust them
+* https://github.com/farnazj/Trustnet-Backend: server hosting trust information and credibility assessments
+* https://github.com/farnazj/Trustnet-Client: prototype social application that leverages trusted credibility assessments to filter content in the user's news feed
+* https://github.com/farnazj/Trustnet-Extension: browser extension that leverages trust to inform people about content in place wherever they encounter it as they browse the web
+* https://github.com/farnazj/Reheadline-Extension: browser extension that lets users change article headlines in place for people who trust them
 
 ## 2. What problem(s) are you trying to solve? What use cases are you addressing?
 
-There is a lack of affordances for recording and leveraging *trust* on the web.  Beyond the very limited amont of information that a person can determine to be credible based on their own eyewitness knowledge or reasoning from it, s user's beliefs depend at the root on the information and credibility assessments they receive from trusted facilitator---whether those facilitators are individuals, organizations, or even the platforms delivering the information through applications.   Because trust is fundamental to credibility assessment, we have to do a better job of capturing and leveraging each user's choices about what facilitators they trust.
+There is a lack of affordances for recording and leveraging *trust* on the web.  Beyond the very
+limited amount of information that a person can determine to be credible based on their own
+eyewitness knowledge or reasoning from it, a user's beliefs depend at the root on the information
+and credibility assessments they receive from trusted facilitators—whether those facilitators
+are individuals, organizations, or even the platforms delivering the information through applications.
+Because trust is fundamental to credibility assessment, we have to do a better job of capturing and
+leveraging each user's choices about what facilitators they trust.
 
-We also need to do a better job of surfacing this information at the right time.   Although there are many ways to laboriously investigate the credibility of an article, we need to make it much
+We also need to do a better job of surfacing this information at the right time.  Although there
+are many ways to laboriously investigate the credibility of an article, we need to make it much
 easier for anyone to know at a glance whether an article they are reading is credible.
 
 ### How do you define credibility?
@@ -41,29 +48,29 @@ The primary actors are:
 * Facilitators (referred to as sources in Trustnet), who rate web pages and other trust facilitators for trustworthiness, and expose those
   ratings for consumers to rely on.
 * Consumers who express trust in particular facilitators and can easily see which pages those facilitators
-  rate as trustworthy or untrustworthy.  Consumers and facilitators can overlap.
+  rate as trustworthy or untrustworthy.
 * Trust aggregators, who make it easy to find trust signals for a given page, protect the privacy of
   end-users, and (optionally) identify new trust facilitators who agree with an end-user's independent
   trustworthiness assessments.
 
-Many end-users are expected to also be trust facilitators, especially for their friends and relatives.
+Many consumers are expected to also be trust facilitators, especially for their friends and relatives.
 There is currently just one trust aggregator in the implemented system, but ideally this wouldn't be
 a centralized role.
 
 ## 3. Explain the chain of events that help assess credibility in your proposal. What architectural choices have you made that enable this?
 
 We recognize that all assessments of credibility are based on (i) direct verification entirely 
-from personal knowledgewhich is often
-impossible or (ii) trust in some other entities that provide information necessary to verify.
+from personal knowledge, which is often
+impossible, or (ii) trust in some other entities that provide information necessary to verify.
 While trusted entities might provide supporting evidence or argumentation which is assessed by the
-end user, we focus on the most direct application: an architecture that enables trusted facilitators to
-share their credibility assessments however generated, and that allows end users to fetch and
+consumer, we focus on the most direct application: an architecture that enables trusted facilitators to
+share their credibility assessments however generated, and that allows consumers to fetch and
 aggregate the credibility assessments by those trusted facilitators.
 
 Core assumptions are that (i) it is not possible to establish universally trusted facilitators of
 credibility assessment and therefore (ii) every individual should be able to make their own
 decisions about which facilitators they wish to trust.   This specifically opposes approaches that assume
-that platforms can be trusted to provide credibility assessments to end users who may not trust
+that platforms can be trusted to provide credibility assessments to consumers who may not trust
 those platforms.
 
 Because we wish to support credibility assessment everywhere on the web, we have explored
@@ -74,10 +81,11 @@ assessments directly into web pages via a browser extension, instead of sending 
 to assess credibility.
 
 The chain of events for credibility assessment are:
-* every individual indicates which facilitators---individuals or organizations---they trust.
-* any facilitator can record credibility assessments on any url
-* tools for a user visiting a url, or encountering it in a feed, fetch and aggregate any assessments for that url made by facilitators the user trusts
-* based on the aggregation, the tool presents an aggregate credibliity assessment *in place* as the user views the article or news feed.
+1. every individual indicates which facilitators—individuals or organizations—they trust.
+1. any facilitator can record credibility assessments on any url
+1. when a consumer visits a url or encounters it in a feed,
+   tools fetch and aggregate any assessments for that url made by facilitators the user trusts
+1. based on the aggregation, the tool presents an aggregate credibility assessment *in place* as the user views the article or news feed.
 
 ## 4. Which role(s) does your proposal fill in the ecosystem (noting that some tools fill multiple roles):
 
@@ -90,7 +98,7 @@ The chain of events for credibility assessment are:
 * Reputation. This can include provenance of the chain of providers, verified trust seals.
 * Transparency requires the information provider to disclose information about themselves and their content.
 
-Fundamentally, Trustnet provides a reputation signal for each facilitator and supports aggregation of assessments from
+Fundamentally, Trustnet provides a reputation signal for each piece of content based on an aggregation of assessments from
 trusted facilitators. The extension makes
 it easy to inspect the trusted assessments on links or pages, and the system is transparent about how assessments
 was aggregated, and which trusted facilitators might disagree with the user's considered opinion.
@@ -189,8 +197,9 @@ way of identifying the block that needs to be annotated. There's no existing cro
 for this.
 
 Assessments are bound to URLs, but redirects, query parameters, and user-personalized URLs can all create vast numbers of 
-distinct URLs for the same content.   It would be beneficial to develop standards for indicating the "canonical" URL for a piece
-of content to help converge different assessments.   These standards should not simplify lying by those seeking to avoid assessments.
+distinct URLs for the same content.   There is a standard for indicating the "canonical" URL for a piece
+of content—[`<link rel=canonical>`](https://html.spec.whatwg.org/multipage/links.html#link-type-canonical)—whose integrity is reinforced by its effect on search rankings.
+However, as the Trustnet use may produce the opposite incentive for some content providers, work may be needed to maintain the signal.
 
 As a general perspective on standards, if we are able to pivot towards a web where content without assessments is ignored by user agents, 
 that would provide a strong incentive for content provides to embed trusted assessments directly in their content.   If we remain with 
@@ -216,7 +225,7 @@ Attackers can exploit the fact that link canonicalization is done on the client 
 the server. This optimization has been useful in bootstrapping the system, but there's a good chance
 we'll need to abandon it once someone decides to attack it.
 
-Another attack is for an adversary to take control of the platform which records and disseminates trust assessments.  
+Another attack is for an adversary to take control of a consumer's trust aggregator which records and disseminates trust assessments.  
 
 ### Are there potential unintended consequences, such as enabling censorship or increasing bias?
 
