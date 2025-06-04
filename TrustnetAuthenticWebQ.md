@@ -10,53 +10,59 @@ web ecosystem.
 Trustnet is a tool that lets people identify a list of people and other entities that they trust,
 and then tells them which websites and articles their network thinks are credible.
 
+We are in US East, Central, and West time zones.
+
+Emails: karger@mit.edu
+
 ### Please link to Github repos, proposals, explainers, or drafts that you’ve written.
 
 Trustnet is currently developed in 4 Github repositories:
 
-* https://github.com/farnazj/Trustnet-Backend
-* https://github.com/farnazj/Trustnet-Client
-* https://github.com/farnazj/Trustnet-Extension
-* https://github.com/farnazj/Reheadline-Extension
+* https://github.com/farnazj/Trustnet-Backend server hosting trust information and credibility assessments
+* https://github.com/farnazj/Trustnet-Client prototype social application that leverages trusted credibility assessments to filter content in the user's news feed.
+* https://github.com/farnazj/Trustnet-Extension browser extension that leverages trust to inform people about content in place wherever they encounter it as they browse the web
+* https://github.com/farnazj/Reheadline-Extension browser extension that lets users change article headlines in place for people who trust them
 
 ## 2. What problem(s) are you trying to solve? What use cases are you addressing?
 
-Even if you know for sure who wrote or endorsed an article, there are so many authors that it's hard
-for any individual to develop a sense of how trustworthy a particular author is. It needs to be much
-easier to glance at an article and estimate whether it's credible.
+There is a lack of affordances for recording and leveraging *trust* on the web.  Beyond the very limited amont of information that a person can determine to be credible based on their own eyewitness knowledge or reasoning from it, s user's beliefs depend at the root on the information and credibility assessments they receive from trusted facilitator---whether those facilitators are individuals, organizations, or even the platforms delivering the information through applications.   Because trust is fundamental to credibility assessment, we have to do a better job of capturing and leveraging each user's choices about what facilitators they trust.
+
+We also need to do a better job of surfacing this information at the right time.   Although there are many ways to laboriously investigate the credibility of an article, we need to make it much
+easier for anyone to know at a glance whether an article they are reading is credible.
 
 ### How do you define credibility?
 
 We define credibility for a particular user as endorsement by other entities who that user has marked as
-credible.
+trusted.
 
 ### Describe the actors involved.
 
 The primary actors are:
-* Trust sources, who rate web pages and other trust sources for trustworthiness, and expose those
-  ratings for end-users to rely on.
-* End-users who express trust in particular sources and can easily see which pages those sources
-  rate as trustworthy or untrustworthy.
+* Facilitators (referred to as sources in Trustnet), who rate web pages and other trust facilitators for trustworthiness, and expose those
+  ratings for consumers to rely on.
+* Consumers who express trust in particular facilitators and can easily see which pages those facilitators
+  rate as trustworthy or untrustworthy.  Consumers and facilitators can overlap.
 * Trust aggregators, who make it easy to find trust signals for a given page, protect the privacy of
-  end-users, and (optionally) identify new trust sources who agree with an end-user's independent
+  end-users, and (optionally) identify new trust facilitators who agree with an end-user's independent
   trustworthiness assessments.
 
-Many end-users are expected to also be trust sources, especially for their friends and relatives.
+Many end-users are expected to also be trust facilitators, especially for their friends and relatives.
 There is currently just one trust aggregator in the implemented system, but ideally this wouldn't be
 a centralized role.
 
 ## 3. Explain the chain of events that help assess credibility in your proposal. What architectural choices have you made that enable this?
 
-We recognize that all assessments of credibility are based on (i) direct verification which is often
+We recognize that all assessments of credibility are based on (i) direct verification entirely 
+from personal knowledgewhich is often
 impossible or (ii) trust in some other entities that provide information necessary to verify.
 While trusted entities might provide supporting evidence or argumentation which is assessed by the
-end user, we focus on the most direct application: an architecture that enables trusted sources to
+end user, we focus on the most direct application: an architecture that enables trusted facilitators to
 share their credibility assessments however generated, and that allows end users to fetch and
-aggregate the credibility assessments by those trusted sources.
+aggregate the credibility assessments by those trusted facilitators.
 
-Core assumptions are that (i) it is not possible to establish universally trusted sources of
+Core assumptions are that (i) it is not possible to establish universally trusted facilitators of
 credibility assessment and therefore (ii) every individual should be able to make their own
-decisions about which sources they wish to trust.   This specifically opposes approaches that assume
+decisions about which facilitators they wish to trust.   This specifically opposes approaches that assume
 that platforms can be trusted to provide credibility assessments to end users who may not trust
 those platforms.
 
@@ -66,6 +72,12 @@ platforms that only assess the content “on” those platforms.   Because we be
 credibility assessment cannot interrupt the flow of a user’s activity, we inject credibility
 assessments directly into web pages via a browser extension, instead of sending the user elsewhere
 to assess credibility.
+
+The chain of events for credibility assessment are:
+* every individual indicates which facilitators---individuals or organizations---they trust.
+* any facilitator can record credibility assessments on any url
+* tools for a user visiting a url, or encountering it in a feed, fetch and aggregate any assessments for that url made by facilitators the user trusts
+* based on the aggregation, the tool presents an aggregate credibliity assessment *in place* as the user views the article or news feed.
 
 ## 4. Which role(s) does your proposal fill in the ecosystem (noting that some tools fill multiple roles):
 
@@ -78,9 +90,10 @@ to assess credibility.
 * Reputation. This can include provenance of the chain of providers, verified trust seals.
 * Transparency requires the information provider to disclose information about themselves and their content.
 
-Fundamentally, Trustnet provides a reputation signal for each piece of content. The extension makes
-it easy to inspect the signal on links or pages, and the system is transparent about how reputation
-was aggregated, and which trusted sources might disagree with the user's considered opinion.
+Fundamentally, Trustnet provides a reputation signal for each facilitator and supports aggregation of assessments from
+trusted facilitators. The extension makes
+it easy to inspect the trusted assessments on links or pages, and the system is transparent about how assessments
+was aggregated, and which trusted facilitators might disagree with the user's considered opinion.
 
 ### Are there other ecosystem players that enable the technical approaches with which you will interoperate?
 
@@ -89,14 +102,15 @@ Not yet.
 ## 6. Describe how your technology, tool, or proposal works from a technical perspective.
 
 The extension binds assessments of content to URLs and uses URLs to find assessments for content.
-Because any piece of content appearing on the same page but coming from a different source typically
+Because any piece of content appearing in a social feed but coming from a different facilitator typically
 has a URL of its own (e.g., tweets, Youtube videos, comments), this approach enables separate
-assessment of each content item.
+assessment of each post in a feed.
 
 When a user is on a web page, the extension checks the URL (and its variations) to see whether its
-associated content has been assessed by those the user trusts or follows (other individuals or
+associated content has been assessed by facilitators the user trusts or follows (other individuals or
 entities such as fact checking orgs or news publishing media). If there are such assessments for the
-page, a pane that contains the assessments pops open on the side of the page automatically. However,
+page, an aggregate assessment can be displayed by the corner of the page, and optionally
+a pane that contains the assessments can pop open on the side of the page automatically. However,
 many resources whose accuracy needs to be signalled are usually embedded into a feed or are
 presented as links on an aggregator page and prior work has reported that links are often not
 clicked even when they are shared. Therefore, it is important to surface credibility signals in
@@ -127,10 +141,10 @@ We developed the approach based on our research on:
    We observed that users need a channel for assessing content accuracy for the benefit of their
    social circle and receiving assessments from those they trust (as they currently attempt to
    repurpose, with uncertain efficacy, features provided for other purposes), and they need to
-   indicate who they consider trustworthy separately from the sources they would want to see content
+   indicate who they consider trustworthy separately from the facilitators they would want to see content
    from: [Leveraging Structured Trusted-Peer Assessments to Combat
    Misinformation](https://dl.acm.org/doi/pdf/10.1145/3555637)
-2. Development of a research social media platform prototype that offers these affordances, and
+2. Development of a research prototype social media platform prototype that offers these affordances, and
    evaluating it longitudinally with participants who joined the platform with others from their
    social circle: [Leveraging Structured Trusted-Peer Assessments to Combat
    Misinformation](https://dl.acm.org/doi/pdf/10.1145/3555637)
@@ -162,15 +176,26 @@ We developed the approach based on our research on:
 
 ## 9. What aspects of your proposal would benefit from being standardized? With which systems does it need to interoperate? How will this fit into existing technical and social systems (e.g. browser extension, peer review)?
 
-Ideally, trust sources could publish their assessments in a way that could be consumed by multiple
+Ideally, trust facilitators could publish their assessments in a way that could be consumed by multiple
 trust aggregators, and end-users could consume those assessments either directly or through their
-choice of aggregators. That implies standardized protocols for source<->aggregator and
-aggregator<->user communication.
+choice of aggregators. That implies standardized protocols for facilitator<->aggregator and
+aggregator<->user communication.  There may also be efficiency opportunities in standards that permit a 
+content source to embed assessments directly in the content (in a trustworthy way), 
+turning the countent source itself into an aggregator.
 
 Browsers (or extensions in them) need to be able to display assessments on links. Since modern
 social networking sites display a block of content instead of just an `<a>` tag, we need a standard
 way of identifying the block that needs to be annotated. There's no existing cross-site convention
 for this.
+
+Assessments are bound to URLs, but redirects, query parameters, and user-personalized URLs can all create vast numbers of 
+distinct URLs for the same content.   It would be beneficial to develop standards for indicating the "canonical" URL for a piece
+of content to help converge different assessments.   These standards should not simplify lying by those seeking to avoid assessments.
+
+As a general perspective on standards, if we are able to pivot towards a web where content without assessments is ignored by user agents, 
+that would provide a strong incentive for content provides to embed trusted assessments directly in their content.   If we remain with 
+the current web where content is generally trusted *unless it is assessed false*, the providers have incentives *against* providing standardized
+assessments.
 
 ## 10. Create a threat model for your technology, tool, or proposal. What are potential attack vectors? What can be done to mitigate these risks?
 
@@ -178,25 +203,27 @@ _This section contains speculation about the system's dynamic behavior, which ou
 
 Entities ranging from individual content creators up to nation-states have an interest in telling end-users that particular content either is or is not trustworthy. We assume that these attackers can create an unlimited number of sockpuppets and have those sockpuppets rate content in any way they want. To manipulate the trustworthiness shown to any individual end-user, the attacker needs to control a significant fraction of that user's trusted sources, which requires convincing the end-user to mark the attacker's sockpuppets as trustworthy. This is likely to happen by agreeing with the end-user's independent assessments a significant fraction of the time, which requires being honest about most ratings during that time. After getting "enough" subscribers, the attacker can change strategies to publish dishonest ratings.
 
-When an end-user's trust sources disagree about a page, the tool shows that fact. Since users are
-likely to still have a significant fraction of honest trust sources, this gives them a prompt to
+When an end-user's trust facilitators disagree about a page, the tool shows that fact. Since users are
+likely to still have a significant fraction of honest trust facilitators, this gives them a prompt to
 discover that the attacker's sockpuppets have become unreliable so that the end-user can remove them
-as trust sources and end the attack.
+as trust facilitators and end the attack.
 
-Another avenue of attack is to buy widely-used trust sources. Again, as long as attackers can't buy
-a supermajority or all of an end-user's sources, the user will see the disagreement among their
-sources, which will prompt them to mark these compromised sources as no-longer-trusted.
+Another avenue of attack is to buy widely-used trust facilitators. Again, as long as attackers can't buy
+a supermajority or all of an end-user's facilitators, the user will see the disagreement among their
+facilitators, which will prompt them to mark these compromised facilitators as no-longer-trusted.
 
 Attackers can exploit the fact that link canonicalization is done on the client and then cached on
 the server. This optimization has been useful in bootstrapping the system, but there's a good chance
 we'll need to abandon it once someone decides to attack it.
+
+Another attack is for an adversary to take control of the platform which records and disseminates trust assessments.  
 
 ### Are there potential unintended consequences, such as enabling censorship or increasing bias?
 
 The primary unintended consequence of this system is in reinforcing echo chambers. However, most
 people know personally some other people who are outside of their primary echo chamber, and are
 likely to mark them as trusted, even if they often disagree about the trustworthiness of web pages.
-These divergent trust sources can prompt people to think harder about particular articles, and
+These divergent trust facilitators can prompt people to think harder about particular articles, and
 thinking harder is what breaks people out of echo chambers.
 
 
