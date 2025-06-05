@@ -98,8 +98,8 @@ The chain of events for credibility assessment are:
 * Reputation. This can include provenance of the chain of providers, verified trust seals.
 * Transparency requires the information provider to disclose information about themselves and their content.
 
-Fundamentally, Trustnet provides a reputation signal for each piece of content based on an aggregation of assessments from
-trusted facilitators. The extension makes
+Fundamentally, Trustnet provides a *personalized* credibility signal for each piece of content based on an aggregation of assessments from
+*personally*-trusted facilitators. The extension makes
 it easy to inspect the trusted assessments on links or pages, and the system is transparent about how assessments
 was aggregated, and which trusted facilitators might disagree with the user's considered opinion.
 
@@ -233,7 +233,8 @@ The primary unintended consequence of this system is in reinforcing echo chamber
 people know personally some other people who are outside of their primary echo chamber, and are
 likely to mark them as trusted, even if they often disagree about the trustworthiness of web pages.
 These divergent trust facilitators can prompt people to think harder about particular articles, and
-thinking harder is what breaks people out of echo chambers.
+thinking harder is what breaks people out of echo chambers.  Independently, there is an argument based in
+personal autonomy that people should have a right to create echo chambers if they wish to do so.
 
 
 ## 11. What do you hope for from W3C in this effort?
