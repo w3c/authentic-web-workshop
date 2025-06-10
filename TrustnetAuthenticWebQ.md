@@ -189,7 +189,7 @@ trust aggregators, and end-users could consume those assessments either directly
 choice of aggregators. That implies standardized protocols for facilitator<->aggregator and
 aggregator<->user communication.  There may also be efficiency opportunities in standards that permit a 
 content source to embed assessments directly in the content (in a trustworthy way), 
-turning the countent source itself into an aggregator.
+turning the content source itself into an aggregator.
 
 Browsers (or extensions in them) need to be able to display assessments on links. Since modern
 social networking sites display a block of content instead of just an `<a>` tag, we need a standard
