@@ -1,6 +1,4 @@
-# Authentic Web Workshop Questionnare: Dokieli
-
-Answer these questions using your familiarity with __<a href="https://www.w3.org/2018/10/credibility-tech/">Technological Approaches to Improving Credibility Assessment on the Web</a>__ (Section 4). Consider your tool as a link in the credible web ecosystem. 
+# Authentic Web Workshop Questionnaire: Dokieli
 
 ## 1. Logistics. Provide a brief description of your technology, tool, or proposal. How can we contact you? In what time zone are you located? Please link to Github repos, proposals, explainers, or drafts that you’ve written.
 
@@ -117,7 +115,7 @@ Dokieli implements:
 
 ## 7. Describe the user experience and the user research that went into development.
 
-We are collaborating with Fundacion Cibervoluntarios ( https://www.cibervoluntarios.org/ ) to conduct user research, which will be focused on how users engage with online content and their understanding of decentralization and related technologies. We aim to assess how well the features that we're planning to implement can aid them in engaging with content more critically, while respecting their autonomy.
+We are collaborating with [Fundacion Cibervoluntarios](https://www.cibervoluntarios.org/) to conduct user research, which will be focused on how users engage with online content and their understanding of decentralization and related technologies. We aim to assess how well the features that we're planning to implement can aid them in engaging with content more critically, while respecting their autonomy.
 
 This research includes focus groups with target groups, as well as an online survey. See also an announcement on the credibility CG mailing list: [Survey on assessing online credibility and decentralization technologies](https://lists.w3.org/Archives/Public/public-credibility/2025Jun/0002.html)
 
