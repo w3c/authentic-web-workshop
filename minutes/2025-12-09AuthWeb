@@ -1,0 +1,147 @@
+# Authentic Web mini-workshop series: dokie.li
+Dec 9, 2025
+
+[Responses to Questionnaire](https://github.com/w3c/authentic-web-workshop/blob/main/DokieliQ.md) 
+[Slides](https://csarven.ca/presentations/dokieli-authentic-web)
+[Video Record](https://customer-0kix77mxh2zzzae0.cloudflarestream.com/a6eb6f66ebd6b9e8391c7724ae662b7b/watch)
+
+
+Chat: irc.w3.org #CredWeb
+Chair: Tzviya Siegman
+Scribe: Chris Needham
+
+
+Present:
+
+- Tzviya Siegman
+
+- Chris Needham
+
+- [Sarven Capadisli](https://csarven.ca/#i)(W3C TAG, dokieli)
+
+- Virginia Balseiro (dokieli)
+
+- Maria Ruiz de Assin de los Santos (Fundacion Cibervoluntarios)
+
+- Barrett Golding
+
+- Max Gendler
+
+- Owen Ambur
+
+- Bob Wyman
+
+- Ehsan Torieni (Samsung)
+
+- Matthew Atkinson
+
+- Jeffrey Yasskin
+
+- Scott Yates, chair, founder of JournalList, caretaker of trust.txt
+
+- Annette Greiner
+
+- Ted Thibodeau
+
+- Felipe Ribeiro
+
+- Reto Gmür, FactsMission
+
+Sarven: I’m presenting with Virginia and Maria. I won’t go into every detail, so focus specifically on use in credibility assessment. I’ll give some background, research, challenges, then discussion.
+
+As background, [dokie.li](http://dokie.li) is open source, written in HTML, CSS, JS. You can include it in any HTML document, or use it as a web extension. It’s an authoring and annotation tool, much like Google docs. The emphasis in [dokie.li](http://dokie.li) is to use as much of the web standards as we have available, to do read/write operations, share documents, send notifications. Content is expressed in standard vocabularies, we use SPARQL and RDF. Everything is in human readable format. We stick to the principles of user autonomy and access. We want to ensure people who want to create content aren’t locked into a particular storage or identity provider. Access can be human and machine readable, semantics and accessibility.
+
+The WorldWideWeb browser, and the Amaya browser. [dokie.li](http://dokie.li) is similar, demonstrating the web standards that the community is developing, and see how it works in the browser. If you look at the [dokie.li](http://dokie.li) homepage you’ll see examples.
+
+Why does it exist? Frustrations in scientific publication and decentralised web publishing. We put content creators at the centre of the work, they choose where to store data, what identifiers they use, and how they express the content. There’s no vendor lock in, the tool doesn’t require a particular ID provider or storage solution. We don’t pass data to third parties. You sign in and the tool discovers whatever you let the tool know about yourself, and your interactions, contacts, social networks, and so on. Can be used by readers, educationalists, researchers, journalists, etc.
+
+We have work on i18n and web extension work coming up, collaborative editing.
+
+Virginia: Our roadmap shows the tasks we’re doing. Some are supported by NLNet. We’re collaborating with Fundación Cibervoluntarios. We participate in standards development at W3C, here and in other groups.
+
+The challenges we have are shared by everyone in this problem space. Information overload on the web, echo chambers, mis and disinformation. We don’t have built in mechanisms on the web to make credibility assessments. How do you know if anything said online is true or not? How can we help individuals using the web to engage more critically with the content they read? Different sources, not everything comes from the same sources, e.g., with social media you can get into bubbles. How can we make an annotation or authoring tool as a browser extension, identify things requiring closer inspection or require more collaboration on a topic?
+
+[dokie.li](http://dokie.li) doesn’t intend to say what’s true or false, just identify things to look into. ?? work on digital literacy, supporting critical thinking skills.
+
+Sarven: There’s some peer reviewed background work, also the linked data notifications was a W3C specification
+
+Maria: I’m a research assistant. We followed a mixed methods approach to know people’s attitudes to decentralisation, how they understand digital identity, and how they consume information. Online qualitative discussions, then an online poll. We divided the participants into 3 main profiles: information creators, e.g., journalists, information disseminators, such as teachers, and general consumers, i.e., readers. We assessed their digital skills, to map if their knowledge could affect their consumption of information or attitude to decentralisation.
+
+For the qualitative part we contacted 15 people, in 3 focus groups. We wanted to discuss 3 main topics: digital identity and privacy, to explore how people engage with security practices online, and how they perceive data control. Information consumption and trust, and how they assess whether sources are reliable or not, e.g., fact checking behaviours. Then, centralisation, how people perceive platforms and barriers, open access. For the quantitative part we got 40 people to participate, different age groups and backgrounds. Most worked in IT or software development, so need to allow for that. We followed the same thematic structure in the focus groups.
+
+Key findings. Consistent patterns in the 3 main topics. On digital identity, all the people who had higher level digital skills and lower level, both had a feeling that identity is only partly under their control, and mostly shaped by large companies who take their data. Privacy and anonymity is impossible. An important difference is that people with higher level skills could develop strategies to control information, but people with lower level skills were more vulnerable and exposed. This showed a gap in social and digital inequality.
+
+On information consumption, all 3 groups claim to be able to compare and verify information shown to them online But citizens feel overwhelmed by information, e.g., how news online affects their emotions … they needed to escape the intensity, so they limit exposure to the information or turn to lighter content. Teachers feel they have more control, relying on institutional sources, and apply protective behaviors on social media. Journalists have the most diversified and complex methods. They follow ?? and ?? and deliberately reduce the information noise by prioritising high quality sources. It felt easier for them to do so compared to general citizens.
+
+On decentralisation, this was unfamiliar. People not used to using these platforms. Community of sharing knowledge together. Journalists could see the potential, but also challenges in moderating the knowledge, and assess credibility of the knowledge being shared. People in general had higher familiarity with the platforms in general, but they work in IT so take into account.
+
+There was a consensus, but they all showed that underneath everything there’s social inequality showing how people are more vulnerable in these spaces, related mostly to digital skills.
+
+Next steps for the research, refinement, taking the feedback into the requirements definition of the tool. Lots of feature development, testing iteratively with people. And trials of the platform.
+
+Virginia: Next steps for the research and design of features. Firstly, refining requirements. We’re improving the use cases so we have a better concept of what we’re trying to develop. We’ll do iterative user testing in cycles. Next year, we’ll have a programme of training and workshops, with ??, doing impact assessments and case studies to improve dokieli and the tools
+
+Use cases for readers, creators, and examiners. Creators can be fact checkers, content creators in general. We put bloggers also in to the examiner category. Sharing fact check insights into web content. [Reads the use cases]
+
+Contextual insights are helpful for both readers and authors. Helps authors improve their content.
+
+Smaller use cases within those.
+
+Technical detail on how it’s implemented. We use Web Annotations for assessing claims in documents, bookmarking, commenting, highlighting. We have citations for refuting, extending. Robust links to prevent link rot. You can spontaneously fact check any article on the web.
+
+Labelling information and aggregating machine readable data. We’re doing named entity recognition, a client side approach not dependent on external servers, but this compromises the accuracy a bit. Want to let users decide if they want to use external services.
+
+It can run server side, if the user is fine with that. It’ll be faster and more accurate. But we generally prefer client-side, but that means bigger file size. Use transformer based classification based on TextBuster.
+
+Sarven: TimBL’s “Oh Yeah” button. If you’re curious as a reader about a statement on a webpage and you want provenance our a source check, who signed the statement. Tim mentioned this in his design issue in 1997. Dokieli is a realisation of that. The flow is simple, the user highlights a sentence, then there’s a Oh Yeah? button, which opens a panel that shows a content analysis: what kind of knowledge is it, entities, sentiments and content warnings that should be shown. All this is in the context of the user’s online profile. There’s some form of validation and a way of checking if content is missing citations or links. The fact checking can be done through authoritative sources, which can mean different things to different people. The commons on the web might be wikipedia / wikidata, open street maps, nano publications, whois lookups, or claim checks of statements for authenticity or validity by asking your social network or domain experts.
+
+This is implemented. [Shows screencast]
+
+The demo shows an article, with some annotation already. The user wants to understand the annotation, they click and it to view. The annotation is stored wherever the annotator decided to store it, e.g., their own storage or an annotation storage. It’s not tied to the article.
+
+The “Oh Yeah?” Button opens a tab, to request an assessment from a social network or shared inbox or domain experts. Assessment can include tags. The user profile indicates topics they’re interested in, and where to share notifications to, and where to get annotations from. An inbox for climate change topic, for example. The annotations there are from different locations.
+
+In another example, the user selects text, clicks Oh Yeah? And the panel shows claim checks. The point is not so much that the datasets are trained on this particular dataset, but we picked something out of the box that could be customised to the kind of content. This all depends on where the user profile might be or where the ?? is pointing to. There’s a confidence level that it’s a factual statement, with an explanation.
+
+We look up wikidata for the entities identified. We use SPARQL as it semed much more efficient and geared to filtering to the kinds of things we want to filter on. Useful way to find content.
+
+Nanopublications…
+
+Working on verifiable credentials, to check statements, and we do a whois lookup on who’s behind a domain. CredWeb CG report includes many things demonstrated by this authoring tool.
+
+There’s a graph view, which shows all the information dokieli was able to gather. The graph data could be published on its own, and its queryable like everything else.
+
+Dokieli uses many web standards: protocols, ActivityPub, ODRL, Memento, Robust Links, typed citations, e.g., linking to something for evidence or to refute something We use the PROV ontology.
+
+New standards, potentially, a credibility assessment model, argumentation data model. We’re interested in getting more granular web annotation motivations, beyond questioning. Web Extensions. Dokieli could even be part of the browser itself, so we want to see how it works as an application or as part of the browser.
+
+On security, we have a threat model. Who’s monitoring the inboxes, or writing what annotations. How to identify biases, address harassment.
+
+Any questions?
+
+Jeffrey: When I go to dokieli I get a page with a sign in button and a URL input box. When I edit something, the save box requires a URL. How do people get into this system?
+
+Virginia: Dokieli wants to be independent of any particular service provider. Any server that can work with the protocols can work with it. I personally use my personal server. This is part of the work we’re focusing more on now, getting more people to use it. We have made progress on making use of features without signing in. You acn work entirely locally if you want. If you want to save to the cloud, you need a storage and you have to be signed in. We’re compatible with SOLID, but not many stable servers we can rely on.
+
+Sarven: Because we’re working within the web platform, if the user has web storage else where on the web, that’s orthogonal to dokieli. The hardest part is getting the user to sign in. If that’s based on standards, the reading and writing is then just standard HTTP requests, and dokieli issues the requests on behalf of the user, with no notion of where that’s going on the web.
+
+Scott: How do you plan to drive adoption? It seems not the easiest thing to know about or use for regular users
+
+Sarven: We’re concerned about that, and lowering the barrier. Two parts: do want a decentralised system, or if we want a centralised system, you can do this in Google docs right now, and email people to collaborate with. Something different requires different solutions that move away from centralisation. Whatever solution comes from the standards space will enable that. How do we showcase that? People do care about controlling their identity and their annotations, and who controls the annotation services and inboxes, who can send information about credibility assessments? It’s hard, for sure. But at no point in this interface is the user required to understand the technical jargon, data models, etc. All that is behind the scenes. Dokieli strives to bring to the level of Google docs complexity.
+
+Virginia: If you want to try it out, just create an account on a SOLID server. The challenge of decentralisation is not exclusive to dokieli, it’s shared with many actors.
+
+Bob: If everyone has control of their own storage, how does dokieli become more than a notetaking application? If people have local copies of their annotations, once those are aggregated into a shared view or combination of links, if the result is that the annotation effort itself isn’t like building something on the web, where anyone can link to it. The web is a shared storage space we all participate in. The model here seems a diversity of tiny databases, but as a result there’s no network effect, building of a community value as it’s difficult to share individual files. The storage issue killed it at Mozilla, back in the day. We have potential solutions, e.g, ActivityPub. WHat’s a social network? Text with links out to objects. Not much different between Twitter and Mastodon from an annotation point of view. Could we use something like AcivityPub as the protocol for accessing and sharing annotations?
+
+Sarven: In short, in theory yes. At the moment, not. There’s no authentication mechanism agreed by all clients. Dokieli is only a client, and doesn’t require one to use a specific server. In order to do that, we need an identity mechanism. With AP, it doesn’t work. Dokieli is an ActivityPub client, but only works if that server lets me do a write operation. To do that I need to be authenticated. So where do we want to solve the problem? On the one hand we want anyone to be able to annotate anything. The average person won’t have a server. There’s a long list of problems.
+
+
+Bob: In the context of W3C standards, the issue is interoperability. Private notetaking apps are not really the domain of standards. Standards become relevant when you have many people relying on common infrastructure, so the sharing problem is most relevant. How do we get to the shared vision of a network of annotations on the web. Important for credibility when anyone can go in and review, and read labels.
+
+Sarven: That’s right, and this is what we’re demonstrating.
+
+Virginia: The topic of discovery is a more general problem than dokieli, We’re focusing on things we can practically do now, e.g, topic inboxes such as for climate change, for annotations. That’s what we’re looking into right now. What’s possible is much broader.
+
+Ted (in chat): To my mind, the challenge is less about where to store my own annotations (which is my own space) and more how to discover and display the annotations others have written about page x (how do I find they've written and stored anything, anywhere?).
+
+
